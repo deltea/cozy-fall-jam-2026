@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://brm84vnc605ib"]
+
+[ext_resource type="Shader" uid="uid://bw4ae0dd4ufc5" path="res://shaders/squiggle.gdshader" id="1_lvrb3"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_w0skf"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ntgnm"]
+noise = SubResource("FastNoiseLite_w0skf")
+
+[resource]
+shader = ExtResource("1_lvrb3")
+shader_parameter/scale = Vector2(1, 1)
+shader_parameter/strength = 0.4
+shader_parameter/fps = 4.0
+shader_parameter/noise = SubResource("NoiseTexture2D_ntgnm")
