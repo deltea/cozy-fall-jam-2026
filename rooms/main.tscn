@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://cj142y6w318yc"]
+
+[ext_resource type="Texture2D" uid="uid://bbbeui1mhmhi6" path="res://assets/textures/background.png" id="1_x4obk"]
+[ext_resource type="PackedScene" uid="uid://cgg8kax34vucs" path="res://scenes/cats/cat_1.tscn" id="2_0xd5j"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_38or4"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0xd5j"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_w0skf"]
+normal = Vector2(-1, 0)
+
+[node name="Main" type="Node2D" unique_id=1205137857]
+metadata/_edit_vertical_guides_ = [240.0]
+metadata/_edit_horizontal_guides_ = [160.0]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=2074180505]
+position = Vector2(240, 160)
+texture = ExtResource("1_x4obk")
+
+[node name="Ground" type="StaticBody2D" parent="." unique_id=1637761798]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ground" unique_id=1316325070]
+position = Vector2(240, 288)
+shape = SubResource("WorldBoundaryShape2D_38or4")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Ground" unique_id=1786391059]
+position = Vector2(140, 160)
+shape = SubResource("WorldBoundaryShape2D_0xd5j")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Ground" unique_id=1147290612]
+position = Vector2(340, 160)
+shape = SubResource("WorldBoundaryShape2D_w0skf")
+
+[node name="Cat1" parent="." unique_id=2146982063 instance=ExtResource("2_0xd5j")]
+position = Vector2(208, 184)
+
+[node name="Cat2" parent="." unique_id=1509896362 instance=ExtResource("2_0xd5j")]
+position = Vector2(176, 128)
+
+[node name="Cat3" parent="." unique_id=561843749 instance=ExtResource("2_0xd5j")]
+position = Vector2(232, 112)
+
+[node name="Cat4" parent="." unique_id=471611827 instance=ExtResource("2_0xd5j")]
+position = Vector2(200, 80)
+
+[node name="Cat5" parent="." unique_id=1962566169 instance=ExtResource("2_0xd5j")]
+position = Vector2(248, 64)
+
+[node name="Cat6" parent="." unique_id=1154550086 instance=ExtResource("2_0xd5j")]
+position = Vector2(276, 101)
+
+[node name="Cat7" parent="." unique_id=19419721 instance=ExtResource("2_0xd5j")]
+position = Vector2(276, 157)
+
+[node name="Cat8" parent="." unique_id=1384307673 instance=ExtResource("2_0xd5j")]
+position = Vector2(154, 58)
